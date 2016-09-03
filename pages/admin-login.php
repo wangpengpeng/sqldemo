@@ -58,7 +58,7 @@ ob_end_flush ();
 <meta content="IE=11.0000" http-equiv="X-UA-Compatible">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="icon" type="image/png" href="assets/i/favicon.png">
-<title>登录 - 中北大学宿舍管理系统</title>
+<title>登录 - 大学宿舍管理系统</title>
 <script src="assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="assets/js/login.js" type="text/javascript"></script>
 <link rel="stylesheet" type="test/css" href="assets/css/login.css">
@@ -73,7 +73,7 @@ ob_end_flush ();
 <body>
 	<div class="top_div">
 		<div class="top_title">
-			<h1>中北大学 宿舍管理系统</h1>
+			<h1>大学宿舍管理系统</h1>
 		</div>
 
 	</div>

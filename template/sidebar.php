@@ -5,17 +5,20 @@
 		// 判断 用户类型，设置显示的不同页面
 		switch ($user_type) {
 			case 0 :
-				$href = "?r=admin&ano={$users['a_no']}";
+				$href = "?r=admin&ano={$users['a_no']}"; //管理员
+				$guanbuild = "管理";
 				$guandor = "管理";
 				$guanstu = "管理";
 				break;
 			case 1 :
-				$href = "?r=daedit&da={$users['da_no']}";
+				$href = "?r=daedit&da={$users['da_no']}";// 宿舍管理员
+				$guanbuild = "管理";
 				$guandor = "";
 				$guanstu = "管理";
 				break;
 			case 2 :
-				$href = "?r=stuedit&sno={$users['s_no']}";
+				$href = "?r=stuedit&sno={$users['s_no']}";// 学生
+				$guanbuild = "管理";
 				$guandor = "";
 				$guanstu = "";
 				break;
@@ -23,6 +26,7 @@
 		?>
 		<li><a href='<?php echo $href?>'><span class="am-icon-pencil-square-o"></span>
 				个人信息 </a></li>
+		<li><a href="?r=dor_build"><span class="am-icon-table"></span> 宿舍楼<?php echo $guanbuild ?> </a></li>
 		<li><a href="?r=dora"><span class="am-icon-table"></span> 楼管<?php echo $guandor?> </a></li>
 		<li><a href="?r=stus"><span class="am-icon-table"></span> 学生<?php echo $guanstu?> </a></li>
 		<li class="admin-parent"><a class="am-cf"

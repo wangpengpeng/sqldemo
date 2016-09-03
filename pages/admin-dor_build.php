@@ -7,7 +7,7 @@ include 'inc/page.class.php';
 $delete = $_GET ['delete'];
 // 不为空时，执行删除操作
 if ($delete != "") {
-	$query2 = "DELETE FROM dor_build WHERE da_no='$delete'";
+	$query2 = "DELETE FROM dor_build WHERE db_no='$delete'";
 	mysql_query ( $query2 ) or die ( '删除错误' . mysql_error () );
 	echo "<script>alert('你好， 编号 " . $delete . " 宿舍楼已成功删除！');location.href='?r=dor_build'</script>";
 }
@@ -20,7 +20,7 @@ $search = $_POST ['search'];
 $searchkeys = $_POST ['searchkeys'];
 // 搜索按钮已按，且 已输入搜索信息，执行搜索操作
 if ($search != "" && $searchkeys != "") {
-	$query = "SELECT * FROM dor_build WHERE da_no='$searchkeys' OR da_name LIKE '%$searchkeys%'";
+	$query = "SELECT * FROM dor_build WHERE db_no='$searchkeys' OR db_name LIKE '%$searchkeys%'";
 }
 // 执行改 sql语句，得到结果集
 $result = mysql_query ( $query ) or die ( 'SQL语句有误：' . mysql_error () );
@@ -30,7 +30,7 @@ $result = mysql_query ( $query ) or die ( 'SQL语句有误：' . mysql_error () 
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>楼管管理 - 中北大学宿舍管理系统</title>
+<title>楼管管理 - 大学宿舍管理系统</title>
 <link rel="icon" type="image/png" href="assets/i/favicon.png">
 <link rel="stylesheet" href="assets/css/amazeui.min.css" />
 <link rel="stylesheet" href="assets/css/admin.css">
@@ -50,7 +50,7 @@ $result = mysql_query ( $query ) or die ( 'SQL语句有误：' . mysql_error () 
 
 			<div class="am-cf am-padding">
 				<div class="am-fl am-cf">
-					<strong class="am-text-primary am-text-lg">住宿楼管理员</strong>
+					<strong class="am-text-primary am-text-lg">住宿楼管理</strong>
 				</div>
 			</div>
 
@@ -62,7 +62,7 @@ $result = mysql_query ( $query ) or die ( 'SQL语句有误：' . mysql_error () 
 							<?php
 							if ($user_type == 0) {
 								?>
-								<a href="?r=danew"><button class="am-btn am-btn-default">新增楼管</button></a>
+								<a href="?r=dor-buildnew"><button class="am-btn am-btn-default">新增住宿楼</button></a>
 								<?php }?>
 							</div>
 						</div>
@@ -92,14 +92,15 @@ $result = mysql_query ( $query ) or die ( 'SQL语句有误：' . mysql_error () 
 									<th>宿舍楼编号</th>
 									<th>宿舍楼名字</th>
 									<th>宿舍楼性别</th>
+									<th>操作</th>
 								</tr>
 							</thead>
 							<tbody>
 							<?php
 							// 分页操作
 							$bignum = 10;
-							$da_num = mysql_num_rows ( $result );
-							$page = new Page ( $da_num, $bignum );
+							$db_num = mysql_num_rows ( $result );
+							$page = new Page ( $db_num, $bignum );
 							$query .= " {$page->limit}";
 							$result = mysql_query ( $query ) or die ( '分页出错:' . mysql_error () );
 
@@ -108,7 +109,7 @@ $result = mysql_query ( $query ) or die ( 'SQL语句有误：' . mysql_error () 
 								?>
 								<tr>
 									<td><?php echo $dadmins['db_no']?></td>
-									<td><a href=""><?php echo $dadmins['da_name']?></a></td>
+									<td><a href=""><?php echo $dadmins['db_name']?></a></td>
 									<td><?php echo $dadmins['db_sex']?></td>
 									<?php
 								// 根据 在 dor_build中查询到的db_no，在dor_build中查询楼名
@@ -116,15 +117,15 @@ $result = mysql_query ( $query ) or die ( 'SQL语句有误：' . mysql_error () 
 								$result1 = mysql_query ( $query1 ) or die ( 'SQL语句有误：' . mysql_error () );
 								$dor_build = mysql_fetch_array ( $result1 );
 								?>
-									<td><?php echo $dor_build['db_name']?></td>
+
 									<?php
 								// 判断用户类型，赋予不同权限
 								if ($user_type == 0) {
 									?>
-									<td><a href="?r=daedit&da=<?php echo $dadmins['da_no']?>"
+									<td><a href="?r=dor-buildedit&da=<?php echo $dadmins['db_no']?>"
 										class="am-btn-xs"><i class="am-icon-pencil-square-o"></i>编辑</a>
 										<a class="am-btn am-btn-xs"> </a> <a
-										href="?r=dor_build&delete=<?php echo $dadmins['da_no']?>"
+										href="?r=dor_build&delete=<?php echo $dadmins['db_no']?>"
 										onClick="return confirm('操作警告：\n\n请注意，删除后无法恢复，请谨慎操作\n\n您确定要删除吗？') "
 										class="am-btn-xs am-text-danger"> <i class="am-icon-trash-o"></i>删除
 									</a></td>

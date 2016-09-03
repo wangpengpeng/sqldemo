@@ -120,7 +120,7 @@ if ($submit != "") {
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>编辑学生 - 中北大学宿舍管理系统</title>
+<title>编辑学生 -大学宿舍管理系统</title>
 <link rel="icon" type="image/png" href="assets/i/favicon.png">
 <link rel="stylesheet" href="assets/css/amazeui.min.css" />
 <link rel="stylesheet" href="assets/css/admin.css">

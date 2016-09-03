@@ -30,7 +30,7 @@ $result = mysql_query ( $query ) or die ( 'SQL语句有误：' . mysql_error () 
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>楼管管理 - 中北大学宿舍管理系统</title>
+<title>楼管管理 -  大学宿舍管理系统</title>
 <link rel="icon" type="image/png" href="assets/i/favicon.png">
 <link rel="stylesheet" href="assets/css/amazeui.min.css" />
 <link rel="stylesheet" href="assets/css/admin.css">

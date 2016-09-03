@@ -1,5 +1,5 @@
 <div class="am-topbar-brand">
-	<strong>NUC</strong> <small>中北大学 宿舍管理系统</small>
+	<strong>CQU</strong> <small>大学宿舍管理系统</small>
 </div>
 <button
 	class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
