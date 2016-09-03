@@ -106,7 +106,7 @@ if ($submit != "") {
 						<div class="am-form-group">
 							<label for="admin-name" class="am-u-sm-3 am-form-label">宿舍楼名字</label>
 							<div class="am-u-sm-9">
-								<input type="text" name="admin-name" placeholder="输入你的姓名"
+								<input type="text" name="admin-name" placeholder="输入宿舍楼名字"
 									value="<?php echo $dor_build['db_name']?>">
 							</div>
 						</div>
@@ -128,12 +128,23 @@ if ($submit != "") {
 						</div> -->
 
 						<div class="am-form-group">
-							<label for="admin-address" class="am-u-sm-3 am-form-label">宿舍楼性别</label>
-							<div class="am-u-sm-9">
-								<input type="text" name="admin-address" placeholder="宿舍楼性别"
-									value="<?php echo $dor_build['db_sex']?>">
-							</div>
-						</div>
+<!--							<label for="admin-address" class="am-u-sm-3 am-form-label">宿舍楼性别</label>-->
+<!--							<div class="am-u-sm-9">-->
+<!--								<input type="text" name="admin-sex" placeholder="宿舍楼性别"-->
+<!--									value="--><?php //echo $dor_build['db_sex']?><!--">-->
+<!--							</div>-->
+<!--						</div>-->
+
+                        <div class="am-form-group">
+                            <label for="stu-sex" class="am-u-sm-3 am-form-label">宿舍楼性别</label>
+                            <div class="am-u-sm-9">
+                                <select name="admin-sex">
+                                    <option value="性别">请选择 性别</option>
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                </select>
+                            </div>
+                        </div>
 
 						<!-- <div class="am-form-group">
 							<label for="admin-word" class="am-u-sm-3 am-form-label">登录密码</label>

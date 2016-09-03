@@ -127,13 +127,24 @@ if ($submit != "") {
 							</div>
 						</div> -->
 
-						<div class="am-form-group">
-							<label for="admin-address" class="am-u-sm-3 am-form-label">男女宿舍楼</label>
-							<div class="am-u-sm-9">
-								<input type="text" name="admin-sex"
-									placeholder="请输入 该宿舍楼是男还是女宿舍楼">
-							</div>
-						</div>
+<!--						<div class="am-form-group">-->
+<!--							<label for="admin-address" class="am-u-sm-3 am-form-label">男女宿舍楼</label>-->
+<!--							<div class="am-u-sm-9">-->
+<!--								<input type="text" name="admin-sex"-->
+<!--									placeholder="请输入 该宿舍楼是男还是女宿舍楼">-->
+<!--							</div>-->
+<!--						</div>-->
+
+                        <div class="am-form-group">
+                            <label for="stu-sex" class="am-u-sm-3 am-form-label">男女宿舍楼</label>
+                            <div class="am-u-sm-9">
+                                <select name="admin-sex">
+                                    <option value="性别">请选择 性别</option>
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                </select>
+                            </div>
+                        </div>
 
 						<!-- <div class="am-form-group">
 							<label for="admin-word" class="am-u-sm-3 am-form-label">登录密码</label>

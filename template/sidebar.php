@@ -27,7 +27,7 @@
 		<li><a href='<?php echo $href?>'><span class="am-icon-pencil-square-o"></span>
 				个人信息 </a></li>
 		<li><a href="?r=dor_build"><span class="am-icon-table"></span> 宿舍楼<?php echo $guanbuild ?> </a></li>
-		<li><a href="?r=dora"><span class="am-icon-table"></span> 楼管<?php echo $guandor?> </a></li>
+		<li><a href="?r=dora"><span class="am-icon-table"></span> 楼管员<?php echo $guandor?> </a></li>
 		<li><a href="?r=stus"><span class="am-icon-table"></span> 学生<?php echo $guanstu?> </a></li>
 		<li class="admin-parent"><a class="am-cf"
 			data-am-collapse="{target: '#collapse-nav'}"><span
